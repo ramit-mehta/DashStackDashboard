@@ -23,14 +23,11 @@ export default function Login() {
     const user = JSON.parse(localStorage.getItem("user"));
 
     if (user?.email === email && user?.password === password) {
-      localStorage.setItem("auth", "true");
-
       if (remember) {
         localStorage.setItem("rememberEmail", email);
       } else {
         localStorage.removeItem("rememberEmail");
       }
-
       navigate("/dashboard");
     } else {
       alert("Invalid email or password");
