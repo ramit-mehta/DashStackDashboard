@@ -2,23 +2,20 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import Dashboard from "./pages/dashboard/Dashboard";
-import ProtectedRoute from "./routes/ProtectedRoute";
+
+const isAuthenticated = () => {
+  return !!localStorage.getItem("user");
+};
 
 export default function App() {
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-
+      <Route path="/login" element={<Login />} />
       <Route
         path="/dashboard"
-        element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        }
+        element={isAuthenticated() ? <Dashboard /> : <Navigate to="/login" />}
       />
-
       <Route path="*" element={<Navigate to="/login" />} />
     </Routes>
   );
