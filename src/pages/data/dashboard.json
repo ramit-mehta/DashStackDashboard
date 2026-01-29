@@ -1,0 +1,36 @@
+{
+  "stats": [
+    {
+      "title": "Total User",
+      "value": "40,689",
+      "change": "+8.5%",
+      "trend": "up",
+      "subtitle": "Up from yesterday",
+      "type": "users"
+    },
+    {
+      "title": "Total Order",
+      "value": "10,293",
+      "change": "+1.3%",
+      "trend": "up",
+      "subtitle": "Up from past week",
+      "type": "orders"
+    },
+    {
+      "title": "Total Sales",
+      "value": "$89,000",
+      "change": "-4.3%",
+      "trend": "down",
+      "subtitle": "Down from yesterday",
+      "type": "sales"
+    },
+    {
+      "title": "Total Pending",
+      "value": "2,040",
+      "change": "+1.8%",
+      "trend": "up",
+      "subtitle": "Up from yesterday",
+      "type": "pending"
+    }
+  ]
+}

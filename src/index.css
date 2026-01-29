@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-auth {
+  background-color: #4880ff;
+  background-image:
+    radial-gradient(at 30% 30%, rgba(255, 255, 255, 0.08) 0px, transparent 50%),
+    radial-gradient(at 70% 70%, rgba(255, 255, 255, 0.08) 0px, transparent 50%);
+}
+
+.label {
+  @apply block text-sm text-gray-500 mb-1;
+}
+
+.input {
+  @apply w-full border border-gray-200 px-4 py-2.5 rounded-lg outline-none focus:border-blue-500;
+}
+
+.btn-primary {
+  @apply bg-[#5B8CFF] text-white py-2.5 rounded-lg font-medium hover:opacity-90;
+}
